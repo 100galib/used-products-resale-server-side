@@ -51,6 +51,11 @@ const run = async() => {
             const service = await allCategori.find(query).toArray();
             res.send(service);
         })
+        app.get('/Category', async(req, res) => {
+            const query = {};
+            const allservice = await allCategori.find(query).toArray();
+            res.send(allservice);
+        })
         app.get('/advertize', async(req, res) => {
             const query = {};
             const getItems = await advertizecollection.find(query).toArray();
